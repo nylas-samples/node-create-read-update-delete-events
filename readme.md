@@ -1,6 +1,6 @@
-# node-code-sample-starter
+# node-create-read-update-delete-events
 
-This sample repo will show you how to easily to get started with the Nylas Node.js SDK.
+This sample repo will show you how to easily to get started with the Nylas Node.js SDK to manage calendars and events using the Nylas API v3.
 
 ## Setup
 
@@ -13,12 +13,12 @@ This sample repo will show you how to easily to get started with the Nylas Node.
 You'll need the following values:
 
 ```text
-ACCESS_TOKEN = ""
-CLIENT_ID = ""
-CLIENT_SECRET = ""
+GRANT_ID = ""
+SERVER_URL = ""
+API_KEY = ""
 ```
 
-Add the above values to a `.env` file:
+Add the above values to a `.env` file. All values can be retrieved from the Nylas Dashboard.
 
 ### Install dependencies
 
@@ -35,21 +35,36 @@ $ npm run build
 $ node build/index.js
 ```
 
-When you run the script, you'll get account information output in your terminal:
+Comment out the specific functions to test out:
+```
+// List out all calendars
+listCalendars()
+
+// Create a new calendar
+// createCalendar()
+
+// Create a new calendar event
+// createEvent()
+
+// Update calendar event
+// updateEvent()
+
+// Destroy calendar event
+// destroyEvent()
+```
+
+Be sure to provide the `.env` and specific variables required for each function.
+
+When you run the script, you'll get all calendar information output in your terminal:
 
 ```bash
 {
-    ...
-    id: '<ACCOUNT_ID>',
-    accountId: '<ACCOUNT_ID>',
-    object: 'account',
-    name: '<ACCOUNT_NAME>',
-    emailAddress: '<ACCOUNT_EMAIL>',
-    provider: '<EMAIL_PROVIDER>',
-    organizationUnit: 'label',
-    syncState: 'running',
-    linkedAt: 2022-04-21T14:48:14.000Z,
-    accessToken: ''
+  calendars: {
+    requestId: 'requestId',
+    data: [
+      # ...Calendar Data...
+    ],
+    next: [Function: bound ]
   }
 }
 ```

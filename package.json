@@ -56,7 +56,8 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "change-case": "^4.1.2",
     "dotenv": "^16.0.1",
-    "nylas": "^6.4.0"
+    "nylas": "git+https://github.com/nylas/nylas-nodejs.git#v7.0.0-beta"
   }
 }

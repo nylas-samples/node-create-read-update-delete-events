@@ -1,9 +1,9 @@
 declare global {
     namespace NodeJS {
       interface ProcessEnv {
-        CLIENT_ID: string;
-        CLIENT_SECRET: string;
-        ACCESS_TOKEN: string;
+        GRANT_ID: string;
+        API_KEY: string;
+        SERVER_URL: string;
       }
     }
   }
