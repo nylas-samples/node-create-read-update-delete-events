@@ -1,13 +1,12 @@
-
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "es2022",
+    "target": "ES6",
+    "module": "Node16",
     "declaration": true,
     "outDir": "./build",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "strict": true
   }
 }

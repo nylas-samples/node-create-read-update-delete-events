@@ -6,6 +6,7 @@ const NylasConfig = {
   serverUrl: process.env.SERVER_URL as string,
 };
 
+// @ts-ignore
 const nylas = new Nylas(NylasConfig);
 
 const listCalendars = async() => {
